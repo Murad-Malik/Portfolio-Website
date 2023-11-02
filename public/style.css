@@ -1,181 +1,53 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  }
-  
-  html{
-    scroll-behavior:smooth;
-  }
-
-  section{
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-  }
-
-  /* this makes the top box*/
-section nav {
-  display:flex;
-  align-items: center;
-  justify-content: space-around; 
-  box-shadow: 0 0 8px rgba(0,0,0,0.6);
-  background: #000000;
-  position: fixed; 
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  height: 5vh;
 }
 
-section nav .logo {
-  font-size: 12px; /* Adjust the font size as needed */
-  color: #ffffff; /* White color */
-  margin: 5px 0;
-  cursor: pointer;
-  position: relative;
-  right: 17.5%; /* Adjust the right position as needed */
-  text-align: center; /* Center the text */
+html {
+  scroll-behavior: smooth;
 }
 
-/* adjusts the text when reducing browser size */
-@media screen and (max-width: 1000px) {
-  section nav .logo {
-    margin: 100px; /* Remove margin to center the text vertically */
-  }
-}
-
-section nav ul{
-  list-style:none
-}
-
-section nav ul li{
-  display: inline-block;
-  margin: 5px 15px;
-}
-
-section nav ul li a{
-  text-decoration: none;
-  color: black;
-  transition: 0.2s;
-}
-
-
-section .main .main_content{
-  display:flex;
-  align-items:center;
-  justify-content: space-around;
-  height: 1200px;
-}
-
-.middle_section{
-  height: 600px;
-}
-
-
-/* drop-down menu  */
-body {
-  margin: 0;
-}
-
-.header {
+/* styles for the header, not text */
+header {
   background-color: transparent;
-  color: #fff;
-  padding: 20px;
+  background-color: #282A37;
+  padding: 2px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.link {
-  background: none;
-  border: none;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-family: inherit;
-  font-size: inherit;
-  cursor: pointer;
-  padding: 0;
-  margin-right: 20px;
-  font-size: 16px
-}
-
-/* Style the "Services" button */
-.services-button {
-  color: rgb(255, 255, 255)
-}
-
-/* Style the "About" links */
-.about-link {
-  color: rgb(255, 255, 255)
-  /* Your styles for the "About" links here */
-}
-
-
-.dropdown.active > .link,
-.link:hover {
-  color: rgb(255, 255, 255);
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  position: absolute;
+  justify-content: flex-end;
+  top: 0;
+  right: 0;
   left: 0;
-  top: calc(100% + .25rem);
-  background-color: #202c34;
-  padding: .75rem;
-  border-radius: .25rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  position: fixed; /* Fix the header at the top */
 }
 
-.dropdown.active > .link + .dropdown-menu{
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+/* Text direction */
+nav li {
+  display: inline;
+  margin: 10px;
 }
 
-.list {
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  gap: 2rem;
+/* Text color for header */
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  transition: text-decoration 0.2s;
 }
 
-.dropdown-links {
+/* Underline the section when hovering */ 
+nav a:hover {
+  text-decoration: underline; 
+}
+
+#home {
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: .25rem;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Optional: Center content vertically in the viewport */
 }
-
-/* editing the dropdown menu by removing the dot and links */
-.dropdown-menu ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.dropdown-menu li a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  padding: 5px;
-}
-
-.dropdown-menu li a:hover {
-  background-color: rgb(244, 239, 239);
-}
-
-.dropdown-menu list {
-  display:flex;
-  flex-direction:column;
-  gap: .25rem;
-}
-
